@@ -1,0 +1,55 @@
+body {
+  padding: 10px;
+  font-family: sans-serif;
+}
+
+.buttonLoadMore {
+  margin: 10px 0;
+}
+
+.giphyGridItem {
+  padding: 10px 15px;
+}
+
+.giphyThumb {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  box-shadow: 0 0 1px #555;
+  cursor: pointer;
+}
+
+.giphyTitle {
+  display: block;
+  text-align: center;
+  padding: 5px;
+  font-size: 0.9em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.625;
+}
+
+.s-image-box {
+  display: flex;
+}
+
+.s-image-box-loading {
+  flex: 1;
+}
+
+.s-image-box-image {
+  flex: 1;
+  object-fit: contain;
+}
+
+@media screen and (min-width: 600px)
+{
+  .giphyThumb {
+    height: 150px;
+  }
+
+  .s-image-box-image {
+    margin: 0 60px;
+  }
+}

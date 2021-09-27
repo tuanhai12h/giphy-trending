@@ -1,0 +1,38 @@
+<head>
+  <title>Giphy Trending</title>
+</head>
+
+<body>
+
+  <h1 class="text-center">Giphy Trending</h1>
+
+  {{> giphyContainer}}
+
+  {{> buttonLoadMore}}
+
+</body>
+
+<template name="buttonLoadMore">
+  <div class="buttonLoadMore text-center">
+    <button class="btn btn-primary">Load More</button>  
+  </div>
+</template>
+
+<template name="giphyContainer">
+  <section class="container">
+    <div class="row">
+      {{#each giphyImages}}
+        {{> giphyGridItem}}
+      {{/each}}
+    </div>
+  </section>
+</template>
+
+<template name="giphyGridItem">
+  <div class="giphyGridItem col-lg-3 col-md-4 col-6">
+    <div class="js-activate-s-image-box" data-full-image-src="{{this.images.downsized.url}}">
+      <img src="{{this.images.preview_gif.url}}" alt="{{this.title}}" class="giphyThumb">      
+    </div>   
+    <span class="giphyTitle"> {{this.title}} </span>
+  </div>
+</template>
