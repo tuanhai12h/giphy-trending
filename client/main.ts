@@ -65,7 +65,7 @@ const getGiphyImages = (offset) =>
 		// console.log(err, res);
 		if (res.data?.data)
 		{			
-			const giphyImages = Session.get('giphyImages') || [];
+			let giphyImages = Session.get('giphyImages') || [];
 			giphyImages = union(giphyImages, res.data.data);
 			
 			// update new data
