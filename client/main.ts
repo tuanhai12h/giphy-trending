@@ -2,7 +2,7 @@ import { Template } from 'meteor/templating';
 
 import './main.html';
 
-const giphyKey = "yktqUKMJUCe82Auqg8hXieKeTdRAEPsT";
+const giphyKey = Meteor.settings.public.GIPHY_KEY;
 const limitOffset = 12;
 
 Template.giphyContainer.onCreated = () =>

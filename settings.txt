@@ -1,0 +1,6 @@
+{
+	"public":
+	{
+	    "GIPHY_KEY": "yktqUKMJUCe82Auqg8hXieKeTdRAEPsT"
+	}
+}
